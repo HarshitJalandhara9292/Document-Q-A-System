@@ -1,0 +1,10 @@
+langchain
+langchain-community
+sentence-transformers
+pinecone-client
+PyMuPDF
+pytesseract
+pdfplumber
+Pillow
+python-dotenv
+google-generativeai
