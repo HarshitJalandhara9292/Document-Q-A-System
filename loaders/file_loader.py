@@ -1,5 +1,5 @@
 import os
-import fitz  # PyMuPDF
+import fitz  
 from loaders.ocr_utils import ocr_page_image
 
 def extract_text_from_pdf(file_path: str, force_ocr: bool = False) -> str:
@@ -41,25 +41,4 @@ def load_file(file_path: str, force_ocr: bool = False) -> str:
         return extract_text_from_txt(file_path)
     else:
         return f"[ERROR] Unsupported file type: {ext}"
-# from PIL import Image
-# import pytesseract
 
-# def load_file(file_path, force_ocr=False) -> str:
-#     ext = file_path.split('.')[-1].lower()
-
-#     if ext == "txt":
-#         with open(file_path, "r", encoding="utf-8") as f:
-#             return f.read()
-    
-#     elif ext == "pdf":
-#         # existing PDF handling (with or without OCR)
-#         ...
-    
-#     elif ext in ["jpg", "jpeg", "png"]:
-#         # ✅ OCR on image files
-#         image = Image.open(file_path)
-#         text = pytesseract.image_to_string(image)
-#         return text
-    
-#     else:
-#         raise ValueError("Unsupported file type.")
